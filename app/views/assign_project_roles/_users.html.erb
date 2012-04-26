@@ -1,4 +1,7 @@
-<h4><%= l(:label_user_plural) -%></h4>
+<h4>
+  <%= link_to image_tag('toggle_check.png'), '#', {:class => 'toggle-link', :title => "#{l(:button_check_all)}" } %>
+  <%= l(:label_user_plural) -%>
+</h4>
 
 <% @users.each do |user| -%>
   <div>
@@ -6,4 +9,3 @@
     <%= label_tag "users_#{user.id}", user.name -%>
   </div>
 <% end %>
-
