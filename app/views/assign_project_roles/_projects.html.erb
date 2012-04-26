@@ -2,7 +2,7 @@
 
 <% @projects.each do |project| -%>
   <div>
-    <%= check_box_tag "projects[#{project.id}][]", project.id -%>
-    <%= label_tag "projects[#{project.id}][]", project.name -%>
+    <%= check_box_tag "projects[]", project.id -%>
+    <%= label_tag "projects[]", project.name -%>
   </div>
 <% end %>

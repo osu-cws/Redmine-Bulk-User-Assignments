@@ -6,6 +6,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.with_options :controller => 'assign_project_roles' do |assign_routes|
     assign_routes.connect "assign_project_roles", :conditions => { :method => :get }, :action => 'index'
+    assign_routes.connect "assign_project_roles/assign", :conditions => { :method => :post }, :action => 'assign'
   end
 
 end

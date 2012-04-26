@@ -2,8 +2,8 @@
 
 <% @users.each do |user| -%>
   <div>
-    <%= check_box_tag "users[#{user.id}][]", user.id -%>
-    <%= label_tag "users[#{user.id}][]", user.name -%>
+    <%= check_box_tag "users[]", user.id, false, :id => "users_#{user.id}" -%>
+    <%= label_tag "users_#{user.id}", user.name -%>
   </div>
 <% end %>
 
