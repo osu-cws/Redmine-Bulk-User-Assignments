@@ -5,7 +5,7 @@
 <%= render :partial => "filter" %>
 
 <% unless @group.new_record? %>
-  <h3>Group: <%= @group.name %></h3>
+  <h3><%= l(:label_group) -%>: <%= @group.name %></h3>
 
   <% form_tag({:action => 'assign'}, :id => 'permissions_form') do %>
 
