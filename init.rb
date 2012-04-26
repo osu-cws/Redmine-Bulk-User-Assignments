@@ -13,9 +13,9 @@ Redmine::Plugin.register :redmine_assign_project_roles do
 
   permission :assign_project_roles, :assign_project_roles => :index
 
-  menu :application_menu, :assign_project_roles,
+  menu :admin_menu, :assign_project_roles,
                           {:controller => 'assign_project_roles', :action => 'index'},
                           :caption => :redmine_assign_project_roles,
-                          :if => Proc.new{User.current.allowed_to?(:assign_project_roles, nil, {:global => true})}
+                          :html => { :class => 'icon roles' }
 
 end
