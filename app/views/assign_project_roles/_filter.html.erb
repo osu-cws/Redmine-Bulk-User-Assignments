@@ -1,0 +1,24 @@
+<%# Filter form for estimate tracking plugin %>
+<div class="filters">
+	<% form_tag({:contoller => "assign_project_roles", :action => "index"}, :method => :get,  :id => "query_form") do %>
+
+	  <fieldset id="filters" class="collapsible">
+	  	<legend onclick="toggleFieldset(this);"><%= l(:label_filter_plural) %></legend>
+	  	<div>
+	  		<p>
+          <span class="filter-condition">
+	  				<%= label_tag l(:label_group) + " "  %>
+	  				<%= select_tag :group_id, 
+	  				      options_from_collection_for_select(@groups, :id, :name, @group.id.to_i) %>
+          </span>
+	  		</p>
+	  	</div>
+	  </fieldset>
+	  
+	  <p class="buttons hide-when-print">
+	    <%= link_to_function l(:button_apply), '$("query_form").submit();', :class => 'icon icon-checked' %>
+      <%= link_to l(:button_clear), { :set_filter => 1 }, :class => 'icon icon-reload'  %>
+	  </p>
+	<% end %>
+
+</div>
