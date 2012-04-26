@@ -22,6 +22,17 @@ class AssignProjectRolesController < ApplicationController
 
     @group ||= Group.new
 
+    if !@group.new_record?
+      @users = @group.users
+      @projects = Project.find(:all, :order => 'lft')
+      @roles = Role.find(:all)
+    end
+
+    # Give us empty arrays if there is no group selected
+    @users ||= []
+    @projects ||= []
+    @roles ||= []
+
   end
 
 end

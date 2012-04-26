@@ -4,6 +4,29 @@
 
 <%= render :partial => "filter" %>
 
+<% unless @group.new_record? %>
+  <h3>Group: <%= @group.name %></h3>
 
-<h3><%= @group.name %></h3>
+  <% form_tag({:action => 'assign'}, :id => 'permissions_form') do %>
 
+    <div class="assignment-container">
+      <%= render :partial => "users" %>
+    </div>
+
+    <div class="assignment-container">
+      <%= render :partial => "projects" %>
+    </div>
+
+    <div class="assignment-container">
+      <%= render :partial => "roles" %>
+    </div>
+
+    <p class="submit"><%= submit_tag l(:button_save) %></p>
+
+  <% end %>
+
+<% end %>
+
+<% content_for :header_tags do %>
+	<%= stylesheet_link_tag :assign_project_roles, :plugin => 'redmine_assign_project_roles' %>
+<% end %>

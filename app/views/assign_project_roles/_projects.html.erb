@@ -1,0 +1,8 @@
+<h4>Projects</h4>
+
+<% @projects.each do |project| -%>
+  <div>
+    <%= check_box_tag "projects[#{project.id}][]", project.id -%>
+    <%= label_tag "projects[#{project.id}][]", project.name -%>
+  </div>
+<% end %>

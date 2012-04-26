@@ -1,0 +1,10 @@
+.assignment-container {
+  float: left;
+  max-width: 30%;
+  margin-right: 75px;
+}
+
+p.submit {
+  clear: both;
+  padding-top: 30px;
+}
