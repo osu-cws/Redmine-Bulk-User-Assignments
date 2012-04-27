@@ -1,12 +1,12 @@
-# Redmine Bulk User Assignment: redmine plugin to simplify assigning users to projects
+# Redmine Bulk User Assignments: redmine plugin to simplify assigning users to projects
 # Copyright (C) 2012  Oregon State University
 
-# Assign Project Roles Controller
+# Bulk User Assignments Controller
 #
 # This controller provides a single index method, which provides an interface for easily
 # assigning multiple users to multiple projects with one or more roles
 
-class BulkUserAssignmentController < ApplicationController
+class BulkUserAssignmentsController < ApplicationController
   unloadable
 
   before_filter :authorize_global
@@ -46,7 +46,7 @@ class BulkUserAssignmentController < ApplicationController
 
     if @users.blank? || @projects.blank? || @roles.blank?
       # Head back to the index
-      flash[:notice] = l(:bulk_user_assignment_submit_error)
+      flash[:notice] = l(:bulk_user_assignments_submit_error)
       redirect_to :action => 'index', :project_id => @project
       return
     end
@@ -71,7 +71,7 @@ class BulkUserAssignmentController < ApplicationController
     end
 
     # Head back to the index
-    flash[:notice] = l(:bulk_user_assignment_roles_assigned)
+    flash[:notice] = l(:bulk_user_assignments_roles_assigned)
     redirect_to :action => 'index', :project_id => @project
 
   end
