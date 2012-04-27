@@ -46,7 +46,7 @@ class BulkUserAssignmentsController < ApplicationController
 
     if @users.blank? || @projects.blank? || @roles.blank?
       # Head back to the index
-      flash[:notice] = l(:bulk_user_assignments_submit_error)
+      flash[:error] = l(:bulk_user_assignments_submit_error)
       redirect_to :action => 'index', :project_id => @project
       return
     end
