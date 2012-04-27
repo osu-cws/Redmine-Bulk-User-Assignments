@@ -1,5 +1,5 @@
 # English strings go here for Rails i18n
 en:
-  redmine_assign_project_roles: Assign Project Roles
-  assign_project_roles_roles_assigned: User roles have been saved
-  assign_project_roles_submit_error: "You must select at least one User, Role, and Project"
+  redmine_bulk_user_assignment: Bulk User Assignment
+  bulk_user_assignment_roles_assigned: User roles have been saved
+  bulk_user_assignment_submit_error: "You must select at least one User, Role, and Project"

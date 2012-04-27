@@ -1,6 +1,6 @@
-<% html_title l(:redmine_assign_project_roles) -%>
+<% html_title l(:redmine_bulk_user_assignment) -%>
 
-<h2><%= l(:redmine_assign_project_roles) -%></h2>
+<h2><%= l(:redmine_bulk_user_assignment) -%></h2>
 
 <%= render :partial => "filter" %>
 
@@ -28,6 +28,6 @@
 <% end %>
 
 <% content_for :header_tags do %>
-	<%= stylesheet_link_tag :assign_project_roles, :plugin => 'redmine_assign_project_roles' %>
-	<%= javascript_include_tag 'assign_project_roles.js', :plugin => 'redmine_assign_project_roles' %>
+	<%= stylesheet_link_tag :bulk_user_assignment, :plugin => 'redmine_bulk_user_assignment' %>
+	<%= javascript_include_tag 'bulk_user_assignment.js', :plugin => 'redmine_bulk_user_assignment' %>
 <% end %>
