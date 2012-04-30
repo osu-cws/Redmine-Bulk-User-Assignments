@@ -29,7 +29,7 @@ Redmine::Plugin.register :redmine_bulk_user_assignments do
   name 'Redmine Bulk User Assignments'
   author 'Matt Hansen'
   description 'This plugin provides an interface for assigning multiple users to project(s) with specified role(s)'
-  version '1.0.0'
+  version '0.1.0'
   url ''
   author_url ''
 
