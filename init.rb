@@ -11,7 +11,7 @@ Redmine::Plugin.register :redmine_bulk_user_assignments do
   url ''
   author_url ''
 
-  permission :bulk_user_assignments, :bulk_user_assignments => :index
+  # permission :bulk_user_assignments, :bulk_user_assignments => :index
 
   menu :admin_menu, :bulk_user_assignments,
                           {:controller => 'bulk_user_assignments', :action => 'index'},
