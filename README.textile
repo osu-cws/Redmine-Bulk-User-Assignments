@@ -1,0 +1,46 @@
+h1. Redmine Bulk User Assignments
+
+The Redmine Bulk Users plugin was developed to provide a way to manage multiple users to multiple projects with multiple roles.  Currently it is only allowed to be set by a Redmine Admin, as it is in the Administration section of Redmine.
+
+The plugin uses groups to manage what comes up in the plugin, due to some systems may have thousands of users.  By allowing group based settings, it minimizes going through many pages of lists.
+
+Why was this plugin necessary?  Redmine as of version 1.3.0 did not have a way to manage users easily.  If a user needed to be added to multiple projects, the user had to be added one at a time.  For a large number of projects, this becomes time consuming.
+
+h2. Requirements
+
+* Redmine version 1.3.0
+* Use of Redmine groups settings (part of Redmine core)
+
+h2. Terminology
+
+* None, all Redmine terminology
+
+h2. Installation
+
+1.  Install the Bulk User Assignments plugin by placing the source code in the vendor/plugins/redmine_bulk_user_assignments directory.  No migration is necessary to install this plugin.
+2.  Restart Redmine to complete the installation process.
+3.  Login as a Redmine admin to use.
+
+h2. Roles and Permissions
+
+There are no roles and permissions to be set.  The plugin is administered by an administrator role in Redmine.  
+
+h2. Configuration
+
+There is no configuration that needs to be set.
+
+h2. Usage
+
+The plugin will not remove any already configured roles for users on projects.
+
+1.  Login as an Admin user
+2.  Go to Administration > Bulk User Assignments
+3.  Select the group
+4.  Left column are users, middle column are projects, right column are roles.
+5.  Select any combination and click Save.
+
+And that's it.
+
+h2. Future and Feature Requests
+
+Version 0.1.0 is not intelligent enough at this development stage to bring in current settings, but additional feature requests are welcome.  Our wish list incorporates being able to bring in current settings of a single user, to be able to change, and to do bulk deletes of users from projects.
