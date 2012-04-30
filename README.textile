@@ -1,6 +1,6 @@
 h1. Redmine Bulk User Assignments
 
-The Redmine Bulk Users plugin was developed to provide a way to manage multiple users to multiple projects with multiple roles.  Currently it is only allowed to be set by a Redmine Admin, as it is in the Administration section of Redmine.
+The Redmine Bulk User Assignments plugin was developed to provide a way to manage multiple users to multiple projects with multiple roles.  Currently it is only allowed to be set by a Redmine Admin, as it is in the Administration section of Redmine.
 
 The plugin uses groups to manage what comes up in the plugin, due to some systems may have thousands of users.  By allowing group based settings, it minimizes going through many pages of lists.
 
@@ -23,7 +23,7 @@ h2. Installation
 
 h2. Roles and Permissions
 
-There are no roles and permissions to be set.  The plugin is administered by an administrator role in Redmine.  
+There are no roles and permissions to be set.  The plugin is administered by an administrator role in Redmine.
 
 h2. Configuration
 
