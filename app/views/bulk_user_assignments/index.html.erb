@@ -1,5 +1,4 @@
 <% html_title l(:redmine_bulk_user_assignments) -%>
-
 <h2><%= l(:redmine_bulk_user_assignments) -%></h2>
 
 <%= render :partial => "filter" %>
@@ -7,7 +6,7 @@
 <% unless @group.new_record? %>
   <h3><%= l(:label_group) -%>: <%= @group.name %></h3>
 
-  <% form_tag({:action => 'assign'}, :id => 'permissions_form') do %>
+  <%= form_tag({:action => 'assign'}, :id => 'permissions_form') do %>
 
     <div class="assignment-container">
       <%= render :partial => "users" %>
