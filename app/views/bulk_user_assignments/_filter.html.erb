@@ -1,5 +1,5 @@
 <div class="filters">
-	<% form_tag({:contoller => "bulk_user_assignments", :action => "index"}, :method => :get,  :id => "query_form") do %>
+	<%= form_tag({:contoller => "bulk_user_assignments", :action => "index"}, :method => :get,  :id => "query_form") do %>
 
 	  <fieldset id="filters" class="collapsible">
 	  	<legend onclick="toggleFieldset(this);"><%= l(:label_filter_plural) %></legend>
